@@ -1,0 +1,8 @@
+
+<agm-map [latitude]="latitude" [longitude]="longitude" (mapClick)="onChosenLocation($event)">
+<agm-marker *ngIf="locationMarked" [latitude]="latitude" [longitude]="longitude"></agm-marker>
+</agm-map>
+
+<input type="text" [(ngModel)]="searchAdress"  placeholder="Search something...">
+{{searchAdress}}
+<button (click)="search()">Doesn't work yet</button>
