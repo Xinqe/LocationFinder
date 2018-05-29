@@ -1,0 +1,31 @@
+ <h2>Create a Discount</h2>
+  <label>name:</label>
+  <input #name>
+  <br/>
+  <label>Description:</label>
+  <input #description>
+  <br/>
+  <label>offertype:</label>
+  <input #offertype>
+  <br/>
+  <label>startdate:</label>
+  <input #startdate>
+  <br/>
+  <label>expirydate:</label>
+  <input #expirydate>
+  <br/>
+  <label>Terms and conditions:</label>
+  <input #terms>
+  <br/>
+  <label>organisation id:</label>
+  <input #organisationID>
+  <br/>
+  <br/>
+
+
+
+<button (click)="goBack()">Back</button>
+  <button (click)="createDiscount(name.value, description.value, offertype.value, startdate.value, expirydate.value, terms.value, organisationID.value);">
+          Create Discount
+        </button>
+
