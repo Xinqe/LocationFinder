@@ -3,6 +3,7 @@ import { Location } from '@angular/common';
 import { FindItServiceService, Discount_offers } from '../find-it-service.service';
 import { ActivatedRoute } from '@angular/router';
 
+
 @Component({
   selector: 'app-find-it-discount-details',
   templateUrl: './find-it-discount-details.component.html',
@@ -22,21 +23,19 @@ export class FindItDiscountDetailsComponent implements OnInit {
 
   goBack(): void {
   this.location.back();
-  
   }
 po: any;
   public getDiscount(): void {
     const id = +this.route.snapshot.paramMap.get('id');
     this.finditService.getDiscount(id).subscribe(data => {this.Discount = data, console.log(data)});
-    this.po = id;
+    this.po = id; //
   }
 
   public updateDiscount():void {
     console.log(this.Discount);
 
     this.finditService.updateDiscount(this.Discount);
-    //this.ngOnInit();
-   this.goBack();
+    this.goBack();
   }
 
 }
